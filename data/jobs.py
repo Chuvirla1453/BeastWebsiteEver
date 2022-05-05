@@ -11,6 +11,9 @@ class Jobs(SqlAlchemyBase, SerializerMixin):
     id = sqlalchemy.Column(sqlalchemy.Integer,
                            primary_key=True, autoincrement=True)
     topic = sqlalchemy.Column(sqlalchemy.String, nullable=True)
-    project = sqlalchemy.Column(sqlalchemy.BLOB, nullable=True)
-    grade = sqlalchemy.Column(sqlalchemy.Integer, nullable=True)
+    section = sqlalchemy.Column(sqlalchemy.String, nullable=True)
+    grade = sqlalchemy.Column(sqlalchemy.Integer, nullable=True, default=-1)
+    filename = sqlalchemy.Column(sqlalchemy.String, nullable=True)
+    chel = sqlalchemy.Column(sqlalchemy.Integer,
+                                    sqlalchemy.ForeignKey("users.id"))
     user = orm.relation('User')

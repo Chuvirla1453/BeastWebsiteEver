@@ -6,8 +6,7 @@ from wtforms.validators import DataRequired, NumberRange, AnyOf
 class RegisterForm(FlaskForm):
     name = StringField('Имя', validators=[DataRequired()])
     surname = StringField('Фамилия', validators=[DataRequired()])
-    klasse = IntegerField('Класс', validators=[DataRequired(), NumberRange(min=5, max=10,
-                                                                           message='целое число от 5 до 10')])
+    klasse = IntegerField('Класс', validators=[DataRequired(), NumberRange(min=5, max=10)])
     position = StringField('Должность (ученик или проверяющий)', validators=[DataRequired(),
                                                                              AnyOf(['Ученик', 'Проверяющий'])])
     email = EmailField('Почта', validators=[DataRequired()])

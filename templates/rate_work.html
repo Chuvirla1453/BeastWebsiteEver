@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add work</title>
+</head>
+<body>
+    {% extends "base.html" %}
+
+    {% block content %}
+    <h1>Оценка Проекта</h1><br>
+    <a href="{{file}}">ссылка на скачивание проекта</a>
+
+    <form action="" method="post" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.a1.label }}<br>
+            {{ form.a1(class="form-control") }}<br>
+            {% for error in form.a1.errors %}
+                <p class="alert alert-danger" role="alert">
+                    {{ error }}
+                </p>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.a2.label }}<br>
+            {{ form.a2(class="form-control") }}<br>
+            {% for error in form.a2.errors %}
+                <p class="alert alert-danger" role="alert">
+                    {{ error }}
+                </p>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.a3.label }}<br>
+            {{ form.a3(class="form-control") }}<br>
+            {% for error in form.a3.errors %}
+                <p class="alert alert-danger" role="alert">
+                    {{ error }}
+                </p>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.a4.label }}<br>
+            {{ form.a4(class="form-control") }}<br>
+            {% for error in form.a4.errors %}
+                <p class="alert alert-danger" role="alert">
+                    {{ error }}
+                </p>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.a5.label }}<br>
+            {{ form.a5(class="form-control") }}<br>
+            {% for error in form.a5.errors %}
+                <p class="alert alert-danger" role="alert">
+                    {{ error }}
+                </p>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.a6.label }}<br>
+            {{ form.a6(class="form-control") }}<br>
+            {% for error in form.a6.errors %}
+                <p class="alert alert-danger" role="alert">
+                    {{ error }}
+                </p>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.a7.label }}<br>
+            {{ form.a7(class="form-control") }}<br>
+            {% for error in form.a7.errors %}
+                <p class="alert alert-danger" role="alert">
+                    {{ error }}
+                </p>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.a8.label }}<br>
+            {{ form.a8(class="form-control") }}<br>
+            {% for error in form.a8.errors %}
+                <p class="alert alert-danger" role="alert">
+                    {{ error }}
+                </p>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.a9.label }}<br>
+            {{ form.a9(class="form-control") }}<br>
+            {% for error in form.a9.errors %}
+                <p class="alert alert-danger" role="alert">
+                    {{ error }}
+                </p>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.a10.label }}<br>
+            {{ form.a10(class="form-control") }}<br>
+            {% for error in form.a10.errors %}
+                <p class="alert alert-danger" role="alert">
+                    {{ error }}
+                </p>
+            {% endfor %}
+        </p>
+        <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
+        {{message}}
+    </form>
+    {% endblock %}
+</body>
+</html>

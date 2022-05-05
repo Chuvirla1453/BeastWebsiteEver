@@ -18,7 +18,7 @@
       </a>
         {% if current_user.is_authenticated %}
             <span class="navbar-text">
-                <h4>{{current_user.name}}</h4>
+                <h4>{{current_user.name}} {{current_user.surname}} {{current_user.klasse}} класс</h4>
                 <p><a class="btn btn-outline-danger " href="/logout"><font color="red">Выйти</font></a></p>
             </span>
         {% else %}

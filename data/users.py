@@ -21,6 +21,7 @@ class User(SqlAlchemyBase, UserMixin, SerializerMixin):
                               index=True, unique=True, nullable=True)
     hashed_password = sqlalchemy.Column(sqlalchemy.String, nullable=True)
     jobs = orm.relation("Jobs", back_populates='user')
+    section = sqlalchemy.Column(sqlalchemy.String, nullable=True, default='none')
 
     def set_password(self, password):
         self.hashed_password = generate_password_hash(password)
